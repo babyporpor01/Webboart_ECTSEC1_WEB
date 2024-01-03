@@ -1,12 +1,15 @@
 <?php 
-$a = 4;
-$b = 10;
-$c = ($b - 5) * $a;
+$a = 10;
+$a++;
+echo "Result 1 = $a <BR>";
 
-echo "Result 1 = " . $c . "<BR>";
-echo 'Result 2 = ' . $c . '<BR>';
-echo "Result 3 = $c <BR>";
-echo 'Result 4 = $c <BR>';
-echo "Result 5 = " . ($c + $b) . "<BR>";
+$a += 20;
+echo "Result 2 = $a <BR>";
+
+$a -= 10;
+echo "Result 3 = $a <BR>";
+
+$a --;
+echo "Result 4 = $a <BR>";
 
 ?>
