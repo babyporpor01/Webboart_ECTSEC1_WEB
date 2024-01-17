@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,13 +16,20 @@
     $login= $_POST['login'];
     $password= $_POST['password'];
         if ($login=="admin" && $password=="ad1234"){
-            echo "ยินดีต้อoรับสำหรับคุณ ADMIN";
+            $_SESSION["username"]="admin";
+            $_SESSION["role"]="a";
+            $_SESSION["id"]=session_id();
+            echo "ยินดีต้อนรับสำหรับคุณ ADMIN";
         }
         if ($login=="member" && $password=="mem1234"){
-            echo "ยินดีต้อoรับสำหรับคุณ MEMBER";
+            $_SESSION["username"]="member";
+            $_SESSION["role"]="m";
+            $_SESSION["id"]=session_id();
+            echo "ยินดีต้อนรับสำหรับคุณ MEMBER";
         }
-      else
-      echo "ชื่อบัญชีหรือรหัสผ่านไม่ถูกต้อง";
+      else{
+        echo "ชื่อบัญชีหรือรหัสผ่านไม่ถูกต้อง";
+      }
         ?>
     </div>
     <br>
