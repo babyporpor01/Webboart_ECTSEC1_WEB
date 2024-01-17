@@ -1,5 +1,9 @@
 <?php 
     session_start();
+    if(!isset($_SESSION['id'])){
+      header("location:index.php");
+      die();
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,7 +24,7 @@
         </select>
         <?php 
             if(!isset($_SESSION['id'])){
-               echo "<a href= login.html style= 'float: right;'>เข้าสู่ระบบ</a>";
+               echo "<a href= login.php style= 'float: right;'>เข้าสู่ระบบ</a>";
             }
             else{
                 echo "<div style='float : right'>
