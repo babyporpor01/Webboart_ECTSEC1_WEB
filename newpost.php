@@ -50,7 +50,7 @@
             <div class="row mt-3">
                 <label for="comment" class="col-lg-3 col-form-label">เนื้อหา</label>
                 <div class="col-lg-9">
-                    <textarea id="comment"  name="comment" class="form-control" required></textarea>
+                    <textarea id="comment"  name="comment" rows="8" class="form-control" required></textarea>
                 </div>
             </div>
             <div class="row mt-3">
